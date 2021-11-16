@@ -12,7 +12,7 @@ body {
 
 canvas {
   margin: auto;
-  top: 0;
+
   left:0;
   border: 5px solid black;
   position: absolute;
