@@ -5,7 +5,6 @@ function setup() {
   background(backgroundColor);
 
   strokeWeight(3);
-  noFill();
 }
 
 function mouseIsPressed() {
