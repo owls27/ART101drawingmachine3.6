@@ -1,24 +1,35 @@
+let backgroundColor = 255;
 let array = [];
-let backgroundColor = 200;
-
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   background(backgroundColor);
 
   strokeWeight(3);
   noFill();
 }
 
+function mouseIsPressed() {
+  array = [];
+  backgroundColor = 255;
+}
+
 function draw() {
   //if (mouseIsPressed == true){
   //}else {}
   if (mouseIsPressed) {
+    backgroundColor -= 4;
     background(backgroundColor);
-    backgroundColor--;
+    //line(mouseX, mouseY, pmouseX, pmouseY);
     //stroke(map(mouseX, 0, 600, 0, 255, true));
     //line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
-    //line(mouseX, mouseY, pmouseX, pmouseY);
     array.push([mouseX, mouseY]);
+    beginShape();
+    for (let i = 0; i < array.length - 1; i++) {
+      curveVertex(array[i][0], array[i][1]);
+      //line(array[i][0], array[i][1], array[i + 1][0], array[i + 1][1]);
+    }
+    endShape();
+
   }
 }
 
