@@ -44,6 +44,7 @@ function keyTyped() {
   }
   return false;
 }
+
 function mouseIsPressed() {
   array = [];
   backgroundColor = 255;
