@@ -1,15 +1,11 @@
 let backgroundColor = 255;
 let array = [];
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(backgroundColor);
 
   strokeWeight(3);
-}
-
-function mouseIsPressed() {
-  array = [];
-  backgroundColor = 255;
 }
 
 function draw() {
@@ -47,4 +43,8 @@ function keyTyped() {
     endShape();
   }
   return false;
+}
+function mouseIsPressed() {
+  array = [];
+  backgroundColor = 255;
 }
